@@ -1,0 +1,13 @@
+C:\ASPnet\ChequeRecord\ChequeRecord\bin\Debug\ChequeRecord.exe.config
+C:\ASPnet\ChequeRecord\ChequeRecord\bin\Debug\ChequeRecord.exe
+C:\ASPnet\ChequeRecord\ChequeRecord\bin\Debug\ChequeRecord.pdb
+C:\ASPnet\ChequeRecord\ChequeRecord\bin\Debug\MySql.Data.dll
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.csprojResolveAssemblyReference.cache
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.WelcomeForm.resources
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.Properties.Resources.resources
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.csproj.GenerateResource.Cache
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.exe
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.pdb
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Banks.resources
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.frmReceiveCheque.resources
+C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Customers.resources
