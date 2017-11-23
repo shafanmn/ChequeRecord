@@ -41,7 +41,6 @@ namespace ChequeRecord.Classes
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 BindingSource bs = new BindingSource();
-
                 bs.DataSource = dt;
                 dgv.DataSource = bs;
                 da.Update(dt);
@@ -50,7 +49,6 @@ namespace ChequeRecord.Classes
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-
             }
             finally
             {
@@ -77,14 +75,12 @@ namespace ChequeRecord.Classes
             try
             {
                 MySqlDataReader dr = cmd.ExecuteReader();
-
                 while (dr.Read())
                     lsb.Items.Add(dr[0].ToString());
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-
             }
             finally
             {
@@ -108,7 +104,6 @@ namespace ChequeRecord.Classes
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-
             }
             finally
             {
