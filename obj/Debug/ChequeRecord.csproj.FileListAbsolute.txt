@@ -11,3 +11,15 @@ C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.pdb
 C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Banks.resources
 C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.frmReceiveCheque.resources
 C:\ASPnet\ChequeRecord\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Customers.resources
+F:\Projects\ChequeRecord\bin\Debug\ChequeRecord.exe.config
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.exe
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.pdb
+F:\Projects\ChequeRecord\bin\Debug\ChequeRecord.exe
+F:\Projects\ChequeRecord\bin\Debug\ChequeRecord.pdb
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.csprojResolveAssemblyReference.cache
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Banks.resources
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.MainForms.Customers.resources
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.MainForms.frmReceiveCheque.resources
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.WelcomeForm.resources
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.Properties.Resources.resources
+F:\Projects\ChequeRecord\obj\Debug\ChequeRecord.csproj.GenerateResource.Cache

@@ -26,5 +26,16 @@ namespace ChequeRecord.MainForms
             dgvCustomers.Columns[0].Width = 25;
             lblCusId.Text = my.getNextId("SELECT id FROM customers ORDER BY id DESC;");
         }
+
+        private void btnAddBank_Click(object sender, EventArgs e)
+        {
+            string name = txtCustName.Text;
+            if (name == "")
+                MessageBox.Show("Please enter the name");
+            else
+            {
+                my.runQuery("INSERT INTO customers(name) VALUES('" + name + "');", name);
+            }
+        }
     }
 }

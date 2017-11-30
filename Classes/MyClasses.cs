@@ -134,5 +134,26 @@ namespace ChequeRecord.Classes
             }
             return id;
         }
+
+        public void runQuery(string q,string name,string ADU)
+        {
+            MySqlCommand cmd = new MySqlCommand(q, this.conn);
+            try
+            {
+                conn.Open();
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show(name + " "+ADU+ " successfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

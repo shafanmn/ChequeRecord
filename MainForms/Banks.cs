@@ -126,26 +126,64 @@ namespace ChequeRecord.MainForms
             string bank = cmbBanks.SelectedItem.ToString();
             string branch = txtMybBranch.Text;
             string type = cmbType.SelectedItem.ToString();
+            string q = "";
+            string opt = "";
 
-            string q = "INSERT INTO mybanks(id,name,acno,branch,type) VALUES(@id,@name,@acno,@branch,@type);";
+            if (btnMyAdd.Text == "UPDATE")
+            {
+                q = "UPDATE mybanks SET bank=@bank,acno=@acno,branch=@branch,type=@type WHERE name=@name;";
+                opt = "Updated ";
+            }
+            else
+            {
+                q = "INSERT INTO mybanks(bank,name,acno,branch,type) VALUES(@bank,@name,@acno,@branch,@type);";
+                opt = "Added ";
+            }
 
-            MySqlCommand cmd = new MySqlCommand(q, this.conn);
-            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = bank;
-            cmd.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
-            cmd.Parameters.Add("@acno", MySqlDbType.VarChar).Value = no;
-            cmd.Parameters.Add("@branch", MySqlDbType.VarChar).Value = branch;
-            cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = type;
+                MySqlCommand cmd = new MySqlCommand(q, this.conn);
+                cmd.Parameters.Add("@bank", MySqlDbType.VarChar).Value = bank;
+                cmd.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
+                cmd.Parameters.Add("@acno", MySqlDbType.VarChar).Value = no;
+                cmd.Parameters.Add("@branch", MySqlDbType.VarChar).Value = branch;
+                cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = type;
+
+                try
+                {
+                    conn.Open();
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Bank details "+opt+"successfully!");
+                        this.clearMyBanks();
+                        my.LoadToListBox(lsdMyBanks, "SELECT name 'BANK' FROM mybanks;");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+        }
+        
+        private void lsdMyBanks_Click(object sender, EventArgs e)
+        {
+            string name = lsdMyBanks.SelectedItem.ToString();
 
             try
             {
                 conn.Open();
-                if(cmd.ExecuteNonQuery() > 0)
+                MySqlDataReader dr = new MySqlCommand("SELECT * FROM mybanks WHERE name = '"+name+"';", this.conn).ExecuteReader();
+                if (dr.Read())
                 {
-                    MessageBox.Show("Bank details added successfully!");
-                    this.clearMyBanks();
-                    my.LoadToListBox(lsdMyBanks, "SELECT name 'BANK' FROM mybanks;");
+                    txtMybName.Text = dr[1].ToString();
+                    txtMybNo.Text = dr[2].ToString();
+                    txtMybBranch.Text = dr[3].ToString();
+                    cmbType.SelectedIndex = cmbType.Items.IndexOf(dr[4].ToString());
+                    cmbBanks.SelectedIndex = cmbBanks.Items.IndexOf(dr[0].ToString());
                 }
-
             }
             catch (Exception ex)
             {
@@ -156,6 +194,24 @@ namespace ChequeRecord.MainForms
                 conn.Close();
             }
 
+            btnMyAdd.Text = "Update";
+            btnMyRemove.Enabled = true;
+        }
+
+        private void btnMyClear_Click(object sender, EventArgs e)
+        {
+            this.clearMyBanks();
+            btnMyAdd.Text = "Add";
+        }
+
+        private void btnMyRemove_Click(object sender, EventArgs e)
+        {
+            string bankname = txtMybName.Text;
+
+            if (MessageBox.Show("Do you want to delete "+bankname+" from your banks?","Confirm",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                my.runQuery("DELETE FROM mybanks WHERE name='" + bankname + "';",bankname);
+            }
         }
     }
 }

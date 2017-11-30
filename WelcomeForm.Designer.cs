@@ -46,7 +46,7 @@
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(935, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.TabStop = true;
             this.menuStrip1.Text = "menuStrip1";
@@ -65,20 +65,20 @@
             this.givenToolStripMenuItem,
             this.receivedToolStripMenuItem});
             this.chequesToolStripMenuItem1.Name = "chequesToolStripMenuItem1";
-            this.chequesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.chequesToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
             this.chequesToolStripMenuItem1.Text = "Enter";
             // 
             // givenToolStripMenuItem
             // 
             this.givenToolStripMenuItem.Name = "givenToolStripMenuItem";
-            this.givenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.givenToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.givenToolStripMenuItem.Text = "Receive";
             this.givenToolStripMenuItem.Click += new System.EventHandler(this.givenToolStripMenuItem_Click);
             // 
             // receivedToolStripMenuItem
             // 
             this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
-            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.receivedToolStripMenuItem.Text = "Give";
             // 
             // settingsToolStripMenuItem
@@ -93,14 +93,14 @@
             // banksToolStripMenuItem
             // 
             this.banksToolStripMenuItem.Name = "banksToolStripMenuItem";
-            this.banksToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.banksToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.banksToolStripMenuItem.Text = "Banks";
             this.banksToolStripMenuItem.Click += new System.EventHandler(this.banksToolStripMenuItem_Click);
             // 
             // customersToolStripMenuItem
             // 
             this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.customersToolStripMenuItem.Text = "Customers";
             this.customersToolStripMenuItem.Click += new System.EventHandler(this.customersToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 525);
+            this.ClientSize = new System.Drawing.Size(1084, 495);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
@@ -116,7 +116,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
